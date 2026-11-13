@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christmas Countdown 2024</title>
+    <title>🎄 Christmas Countdown - By Logan Ingle</title>
     <style>
         * {
             margin: 0;
@@ -268,6 +268,24 @@
             box-shadow: 0 10px 30px rgba(255, 107, 107, 0.2);
         }
 
+        /* Footer Social */
+        .footer-social {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-icon {
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2) rotate(10deg);
+        }
+
         .section h2 {
             font-size: 2em;
             margin-bottom: 20px;
@@ -426,6 +444,264 @@
                 transform: scale(0);
             }
         }
+
+        /* Progress Bar */
+        .progress-container {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #ff6b6b, #ffd700);
+            width: 0%;
+            transition: width 0.3s ease;
+            box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tab-btn {
+            padding: 12px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            color: #fff;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            backdrop-filter: blur(10px);
+        }
+
+        .tab-btn:hover {
+            background: rgba(255, 215, 0, 0.2);
+            border-color: #ffd700;
+            transform: translateY(-2px);
+        }
+
+        .tab-btn.active {
+            background: linear-gradient(135deg, #ff6b6b, #ff8787);
+            border-color: #ff6b6b;
+            box-shadow: 0 5px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        /* Gift Tracker */
+        .gift-list {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .gift-input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .gift-input-group input {
+            flex: 1;
+            padding: 10px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #ffd700;
+            border-radius: 8px;
+            color: #fff;
+            backdrop-filter: blur(10px);
+        }
+
+        .gift-input-group input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .gift-input-group button {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #ff6b6b, #ff8787);
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gift-input-group button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        .gift-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 15px;
+            border-left: 4px solid #ffd700;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .gift-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+
+        .gift-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: #ffd700;
+        }
+
+        .gift-item.completed {
+            opacity: 0.6;
+            text-decoration: line-through;
+        }
+
+        .delete-btn {
+            background: #ff6b6b;
+            border: none;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.2s ease;
+        }
+
+        .delete-btn:hover {
+            background: #ff8787;
+            transform: scale(1.05);
+        }
+
+        /* Music Player */
+        .music-player {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .music-select {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #ffd700;
+            border-radius: 8px;
+            color: #fff;
+            margin-bottom: 15px;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+        }
+
+        .music-select option {
+            background: #1a472a;
+            color: #fff;
+        }
+
+        .music-controls {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .music-btn {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #ff6b6b, #ff8787);
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .music-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        .music-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Share Buttons */
+        .share-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .share-btn {
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #ffd700;
+            border-radius: 8px;
+            color: #ffd700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            backdrop-filter: blur(10px);
+        }
+
+        .share-btn:hover {
+            background: linear-gradient(135deg, #ff6b6b, #ff8787);
+            border-color: #ff6b6b;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: rgba(255, 107, 107, 0.1);
+            border: 2px solid #ff6b6b;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
@@ -450,7 +726,7 @@
     <div class="container">
         <!-- Countdown Timer -->
         <div class="countdown-section">
-            <h2 style="font-size: 1.8em; margin-bottom: 10px;">Time Until Christmas</h2>
+            <h2 style="font-size: 1.8em; margin-bottom: 10px;">⏰ Time Until Christmas</h2>
             <div class="countdown" id="countdown">
                 <div class="countdown-item">
                     <div class="countdown-value" id="days">0</div>
@@ -469,12 +745,25 @@
                     <div class="countdown-label">Seconds</div>
                 </div>
             </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('news')">📰 News</button>
+            <button class="tab-btn" onclick="switchTab('movies')">🎬 Movies</button>
+            <button class="tab-btn" onclick="switchTab('gifts')">🎁 Gift Tracker</button>
+            <button class="tab-btn" onclick="switchTab('music')">🎵 Music</button>
+            <button class="tab-btn" onclick="switchTab('fun')">✨ Fun</button>
+            <button class="tab-btn" onclick="switchTab('share')">📢 Share</button>
         </div>
 
         <!-- Sections Grid -->
         <div class="sections">
             <!-- News Section -->
-            <div class="section">
+            <div class="section tab-content active" id="news-tab">
                 <h2>🎅 Holiday News</h2>
                 <div class="news-item">
                     <div class="news-title">Christmas Markets Open</div>
@@ -495,7 +784,7 @@
             </div>
 
             <!-- Movie Suggestions -->
-            <div class="section">
+            <div class="section tab-content" id="movies-tab">
                 <h2>🎬 Movie Suggestions</h2>
                 <div class="movie-card">
                     <div class="movie-title">Home Alone</div>
@@ -515,8 +804,40 @@
                 </div>
             </div>
 
-            <!-- Animations & Fun -->
-            <div class="section">
+            <!-- Gift Tracker -->
+            <div class="section tab-content" id="gifts-tab">
+                <h2>🎁 Gift Tracker</h2>
+                <div class="gift-list">
+                    <div class="gift-input-group">
+                        <input type="text" id="giftInput" placeholder="What gift do you want?" maxlength="50">
+                        <button onclick="addGift()">Add</button>
+                    </div>
+                    <div id="giftItems"></div>
+                    <p style="text-align: center; color: rgba(255,255,255,0.6); margin-top: 10px;" id="giftCount">No gifts yet. Add your first gift! 🎀</p>
+                </div>
+            </div>
+
+            <!-- Music Player -->
+            <div class="section tab-content" id="music-tab">
+                <h2>🎵 Christmas Music</h2>
+                <div class="music-player">
+                    <select class="music-select" id="musicSelect" onchange="changeMusic()">
+                        <option value="">🎶 Select Christmas Music...</option>
+                        <option value="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">Jingle Bells</option>
+                        <option value="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3">White Christmas</option>
+                        <option value="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3">Silent Night</option>
+                        <option value="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3">O Come All Ye Faithful</option>
+                    </select>
+                    <div class="music-controls">
+                        <button class="music-btn" onclick="playMusic()">▶️ Play</button>
+                        <button class="music-btn" onclick="pauseMusic()">⏸️ Pause</button>
+                        <button class="music-btn" onclick="stopMusic()">⏹️ Stop</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fun Activities -->
+            <div class="section tab-content" id="fun-tab">
                 <h2>✨ Holiday Fun</h2>
                 <p>🎄 Decorate your tree with lights and ornaments</p>
                 <p>🎁 Wrap gifts with festive paper and ribbons</p>
@@ -527,6 +848,18 @@
                 <p>💌 Write letters to loved ones</p>
                 <p>✨ Enjoy the magic of the season!</p>
             </div>
+
+            <!-- Share Section -->
+            <div class="section tab-content" id="share-tab">
+                <h2>📢 Share the Magic</h2>
+                <p style="text-align: center; margin-bottom: 20px;">Spread Christmas cheer with your friends!</p>
+                <div class="share-buttons">
+                    <button class="share-btn" onclick="shareOnTwitter()">𝕏 Twitter</button>
+                    <button class="share-btn" onclick="shareOnFacebook()">f Facebook</button>
+                    <button class="share-btn" onclick="shareViaWhatsApp()">💬 WhatsApp</button>
+                    <button class="share-btn" onclick="copyLink()">🔗 Copy Link</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -535,6 +868,11 @@
         <div class="footer-text">
             <p>✨ Licensed and Created by <strong>Logan Ingle</strong> ✨</p>
             <p style="margin-top: 10px; font-size: 0.9em;">© 2024 Christmas Countdown. All rights reserved.</p>
+            <div class="footer-social">
+                <span class="social-icon" onclick="shareOnTwitter()" title="Share on Twitter">𝕏</span>
+                <span class="social-icon" onclick="shareOnFacebook()" title="Share on Facebook">f</span>
+                <span class="social-icon" onclick="shareViaWhatsApp()" title="Share on WhatsApp">💬</span>
+            </div>
         </div>
     </footer>
 
@@ -683,6 +1021,147 @@
                     }
                 });
             });
+        });
+
+        // Tab switching
+        function switchTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected tab
+            document.getElementById(tabName + '-tab').classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        // Gift Tracker Functions
+        let gifts = JSON.parse(localStorage.getItem('giftList')) || [];
+
+        function addGift() {
+            const input = document.getElementById('giftInput');
+            const gift = input.value.trim();
+            if (gift) {
+                gifts.push({id: Date.now(), text: gift, completed: false});
+                localStorage.setItem('giftList', JSON.stringify(gifts));
+                input.value = '';
+                renderGifts();
+            }
+        }
+
+        function toggleGift(id) {
+            gifts = gifts.map(g => g.id === id ? {...g, completed: !g.completed} : g);
+            localStorage.setItem('giftList', JSON.stringify(gifts));
+            renderGifts();
+        }
+
+        function deleteGift(id) {
+            gifts = gifts.filter(g => g.id !== id);
+            localStorage.setItem('giftList', JSON.stringify(gifts));
+            renderGifts();
+        }
+
+        function renderGifts() {
+            const container = document.getElementById('giftItems');
+            container.innerHTML = '';
+            if (gifts.length === 0) {
+                document.getElementById('giftCount').textContent = 'No gifts yet. Add your first gift! 🎄';
+                return;
+            }
+            document.getElementById('giftCount').textContent = `${gifts.filter(g => g.completed).length}/${gifts.length} gifts completed!`;
+            gifts.forEach(gift => {
+                const div = document.createElement('div');
+                div.className = `gift-item ${gift.completed ? 'completed' : ''}`;
+                div.innerHTML = `
+                    <div>
+                        <input type="checkbox" ${gift.completed ? 'checked' : ''} onchange="toggleGift(${gift.id})">
+                        <span style="margin-left: 10px;">${gift.text}</span>
+                    </div>
+                    <button class="delete-btn" onclick="deleteGift(${gift.id})">Delete</button>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        // Music Player Functions
+        let audioPlayer = new Audio();
+
+        function changeMusic() {
+            const select = document.getElementById('musicSelect');
+            audioPlayer.src = select.value;
+        }
+
+        function playMusic() {
+            if (audioPlayer.src) {
+                audioPlayer.play();
+            } else {
+                alert('Please select a song first!');
+            }
+        }
+
+        function pauseMusic() {
+            audioPlayer.pause();
+        }
+
+        function stopMusic() {
+            audioPlayer.pause();
+            audioPlayer.currentTime = 0;
+        }
+
+        // Share Functions
+        function shareOnTwitter() {
+            const url = window.location.href;
+            const text = `🎄 Join me on the Christmas Countdown 2026! ${url}`;
+            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`,'_blank');
+        }
+
+        function shareOnFacebook() {
+            const url = window.location.href;
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,'_blank');
+        }
+
+        function shareViaWhatsApp() {
+            const url = window.location.href;
+            const text = `🎄 Join me on the Christmas Countdown 2026! ${url}`;
+            window.open(`https://wa.me/?text=${encodeURIComponent(text)}`,'_blank');
+        }
+
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                alert('Link copied to clipboard! 🎉');
+            }).catch(() => {
+                alert('Failed to copy link');
+            });
+        }
+
+        // Update progress bar
+        function updateProgressBar() {
+            const countdownYear = parseInt(localStorage.getItem('countdownYear')) || 2026;
+            const christmasDate = new Date(countdownYear, 11, 25);
+            const yearStart = new Date(countdownYear, 0, 1);
+            const daysTotal = (christmasDate - yearStart) / (1000 * 60 * 60 * 24);
+            const daysElapsed = (new Date() - yearStart) / (1000 * 60 * 60 * 24);
+            const progress = Math.min((daysElapsed / daysTotal) * 100, 100);
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        // Initialize gifts on load
+        window.addEventListener('load', function() {
+            renderGifts();
+            updateProgressBar();
+        });
+
+        // Allow Enter key for gift input
+        document.addEventListener('DOMContentLoaded', function() {
+            const giftInput = document.getElementById('giftInput');
+            if (giftInput) {
+                giftInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') addGift();
+                });
+            }
         });
     </script>
 </body>
