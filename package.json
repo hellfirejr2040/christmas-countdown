@@ -1,0 +1,19 @@
+{
+  "name": "christmas-countdown",
+  "version": "1.0.0",
+  "description": "Interactive Christmas Countdown Website - Licensed by Logan Ingle",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["christmas", "countdown", "festive"],
+  "author": "Logan Ingle",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
